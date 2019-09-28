@@ -571,132 +571,6 @@ function pathToRegexp (path, keys, options) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {// @flow
-
-
-var key = '__global_unique_id__';
-
-module.exports = function() {
-  return global[key] = (global[key] || 0) + 1;
-};
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15)))
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Copyright 2015, Yahoo! Inc.
- * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
- */
-var ReactIs = __webpack_require__(19);
-var REACT_STATICS = {
-    childContextTypes: true,
-    contextType: true,
-    contextTypes: true,
-    defaultProps: true,
-    displayName: true,
-    getDefaultProps: true,
-    getDerivedStateFromError: true,
-    getDerivedStateFromProps: true,
-    mixins: true,
-    propTypes: true,
-    type: true
-};
-
-var KNOWN_STATICS = {
-    name: true,
-    length: true,
-    prototype: true,
-    caller: true,
-    callee: true,
-    arguments: true,
-    arity: true
-};
-
-var FORWARD_REF_STATICS = {
-    '$$typeof': true,
-    render: true,
-    defaultProps: true,
-    displayName: true,
-    propTypes: true
-};
-
-var MEMO_STATICS = {
-    '$$typeof': true,
-    compare: true,
-    defaultProps: true,
-    displayName: true,
-    propTypes: true,
-    type: true
-};
-
-var TYPE_STATICS = {};
-TYPE_STATICS[ReactIs.ForwardRef] = FORWARD_REF_STATICS;
-
-function getStatics(component) {
-    if (ReactIs.isMemo(component)) {
-        return MEMO_STATICS;
-    }
-    return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
-}
-
-var defineProperty = Object.defineProperty;
-var getOwnPropertyNames = Object.getOwnPropertyNames;
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-var getPrototypeOf = Object.getPrototypeOf;
-var objectPrototype = Object.prototype;
-
-function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
-    if (typeof sourceComponent !== 'string') {
-        // don't hoist over string (html) components
-
-        if (objectPrototype) {
-            var inheritedComponent = getPrototypeOf(sourceComponent);
-            if (inheritedComponent && inheritedComponent !== objectPrototype) {
-                hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
-            }
-        }
-
-        var keys = getOwnPropertyNames(sourceComponent);
-
-        if (getOwnPropertySymbols) {
-            keys = keys.concat(getOwnPropertySymbols(sourceComponent));
-        }
-
-        var targetStatics = getStatics(targetComponent);
-        var sourceStatics = getStatics(sourceComponent);
-
-        for (var i = 0; i < keys.length; ++i) {
-            var key = keys[i];
-            if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
-                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
-                try {
-                    // Avoid failures from read-only properties
-                    defineProperty(targetComponent, key, descriptor);
-                } catch (e) {}
-            }
-        }
-
-        return targetComponent;
-    }
-
-    return targetComponent;
-}
-
-module.exports = hoistNonReactStatics;
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
 		module.exports = factory(__webpack_require__(0));
@@ -817,10 +691,136 @@ eval("module.exports = __WEBPACK_EXTERNAL_MODULE_react__;\n\n//# sourceURL=webpa
 });
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "cam_border.0a2f6d9c.svg";
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {// @flow
+
+
+var key = '__global_unique_id__';
+
+module.exports = function() {
+  return global[key] = (global[key] || 0) + 1;
+};
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15)))
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+var ReactIs = __webpack_require__(19);
+var REACT_STATICS = {
+    childContextTypes: true,
+    contextType: true,
+    contextTypes: true,
+    defaultProps: true,
+    displayName: true,
+    getDefaultProps: true,
+    getDerivedStateFromError: true,
+    getDerivedStateFromProps: true,
+    mixins: true,
+    propTypes: true,
+    type: true
+};
+
+var KNOWN_STATICS = {
+    name: true,
+    length: true,
+    prototype: true,
+    caller: true,
+    callee: true,
+    arguments: true,
+    arity: true
+};
+
+var FORWARD_REF_STATICS = {
+    '$$typeof': true,
+    render: true,
+    defaultProps: true,
+    displayName: true,
+    propTypes: true
+};
+
+var MEMO_STATICS = {
+    '$$typeof': true,
+    compare: true,
+    defaultProps: true,
+    displayName: true,
+    propTypes: true,
+    type: true
+};
+
+var TYPE_STATICS = {};
+TYPE_STATICS[ReactIs.ForwardRef] = FORWARD_REF_STATICS;
+
+function getStatics(component) {
+    if (ReactIs.isMemo(component)) {
+        return MEMO_STATICS;
+    }
+    return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
+}
+
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = Object.prototype;
+
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+    if (typeof sourceComponent !== 'string') {
+        // don't hoist over string (html) components
+
+        if (objectPrototype) {
+            var inheritedComponent = getPrototypeOf(sourceComponent);
+            if (inheritedComponent && inheritedComponent !== objectPrototype) {
+                hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+            }
+        }
+
+        var keys = getOwnPropertyNames(sourceComponent);
+
+        if (getOwnPropertySymbols) {
+            keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+        }
+
+        var targetStatics = getStatics(targetComponent);
+        var sourceStatics = getStatics(sourceComponent);
+
+        for (var i = 0; i < keys.length; ++i) {
+            var key = keys[i];
+            if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                try {
+                    // Avoid failures from read-only properties
+                    defineProperty(targetComponent, key, descriptor);
+                } catch (e) {}
+            }
+        }
+
+        return targetComponent;
+    }
+
+    return targetComponent;
+}
+
+module.exports = hoistNonReactStatics;
+
 
 /***/ }),
 /* 9 */
@@ -2146,7 +2146,7 @@ var inheritsLoose = __webpack_require__(3);
 var inheritsLoose_default = /*#__PURE__*/__webpack_require__.n(inheritsLoose);
 
 // EXTERNAL MODULE: ./node_modules/gud/index.js
-var gud = __webpack_require__(5);
+var gud = __webpack_require__(7);
 var gud_default = /*#__PURE__*/__webpack_require__.n(gud);
 
 // CONCATENATED MODULE: ./node_modules/mini-create-react-context/dist/esm/index.js
@@ -2347,7 +2347,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
   return target;
 }
 // EXTERNAL MODULE: ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
-var hoist_non_react_statics_cjs = __webpack_require__(6);
+var hoist_non_react_statics_cjs = __webpack_require__(8);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // CONCATENATED MODULE: ./node_modules/react-router/esm/react-router.js
@@ -3249,12 +3249,21 @@ if (false) { var ariaCurrentType; }
 
 //# sourceMappingURL=react-router-dom.js.map
 
+// CONCATENATED MODULE: ./src/utils/constants.js
+var PATH = 'https://ecociudadano.herokuapp.com/';
+
+var USER = 'user';
+var TRASH_TRANSACTION = 'trash';
 // CONCATENATED MODULE: ./src/Components/Trash.jsx
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 
 
-const Trash_Component = () => {
+
+
+const Trash_Component = ({ history }) => {
     const [trash, setTrash] = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(0);
+    const [disabled, setDisabled] = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(false);
 
     const addTrash = ({ keyCode }) => {
         if (keyCode === 78) {
@@ -3262,6 +3271,35 @@ const Trash_Component = () => {
             setTrash(prev => (Number(prev) + random).toFixed(1));
         }
     };
+
+    const uploadTrash = (() => {
+        var _ref = _asyncToGenerator(function* () {
+            setDisabled(true);
+
+            fetch(`${PATH}postTransaction`, {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    point: trash,
+                    weight: trash,
+                    clientId: 1,
+                    containerId: 1
+                })
+            }).then(function (raw) {
+                return raw.json();
+            }).then(function (json) {
+                localStorage.setItem(TRASH_TRANSACTION, JSON.stringify(json));
+                history.push(`/resume/${Math.floor(trash)}`);
+            });
+        });
+
+        return function uploadTrash() {
+            return _ref.apply(this, arguments);
+        };
+    })();
 
     Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(() => {
         document.addEventListener('keydown', addTrash);
@@ -3280,13 +3318,14 @@ const Trash_Component = () => {
             'Ingresa el reciclaje'
         ),
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-            Link,
-            { to: `/resume/${Math.floor(trash)}` },
-            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                'button',
-                { type: 'button', className: 'trash__btn' },
-                'Terminar'
-            )
+            'button',
+            {
+                onClick: uploadTrash,
+                type: 'button',
+                className: 'trash__btn',
+                disabled: disabled
+            },
+            'Terminar'
         ),
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             'div',
@@ -3305,11 +3344,11 @@ const Trash_Component = () => {
 
 /* harmony default export */ var Trash = (Trash_Component);
 // EXTERNAL MODULE: ./node_modules/react-webcam/dist/react-webcam.js
-var react_webcam = __webpack_require__(7);
+var react_webcam = __webpack_require__(5);
 var react_webcam_default = /*#__PURE__*/__webpack_require__.n(react_webcam);
 
 // EXTERNAL MODULE: ./src/assets/cam_border.svg
-var cam_border = __webpack_require__(8);
+var cam_border = __webpack_require__(6);
 var cam_border_default = /*#__PURE__*/__webpack_require__.n(cam_border);
 
 // CONCATENATED MODULE: ./src/Components/Scan.jsx
@@ -3370,8 +3409,10 @@ const Scan_Component = ({ history }) => {
 
 
 
+
 const Resume_Component = ({ match }) => {
     const { quantity = 1 } = match.params;
+    const data = JSON.parse(localStorage.getItem(TRASH_TRANSACTION));
 
     return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
         external_root_React_commonjs2_react_commonjs_react_amd_react_["Fragment"],
@@ -3389,62 +3430,20 @@ const Resume_Component = ({ match }) => {
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             'ul',
             { className: 'resume__list' },
-            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            data.map(({ garbageType, point }) => external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                 'li',
-                { className: 'resume__item' },
+                { className: 'resume__item', key: garbageType },
                 external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                     'p',
                     { className: 'resume__type' },
-                    'Carton'
+                    garbageType
                 ),
                 external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                     'small',
                     { className: 'resume__qty' },
-                    `${(quantity * 0.33).toFixed(1)} libras`
+                    `${point.toFixed(1)} libras`
                 )
-            ),
-            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                'li',
-                { className: 'resume__item' },
-                external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                    'p',
-                    { className: 'resume__type' },
-                    'Plastico'
-                ),
-                external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                    'small',
-                    { className: 'resume__qty' },
-                    `${(quantity * 0.5).toFixed(1)} libras`
-                )
-            ),
-            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                'li',
-                { className: 'resume__item' },
-                external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                    'p',
-                    { className: 'resume__type' },
-                    'Vidrio'
-                ),
-                external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                    'small',
-                    { className: 'resume__qty' },
-                    `${(quantity * 0.07).toFixed(1)} libras`
-                )
-            ),
-            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                'li',
-                { className: 'resume__item' },
-                external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                    'p',
-                    { className: 'resume__type' },
-                    'Tetrapack'
-                ),
-                external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                    'small',
-                    { className: 'resume__qty' },
-                    `${(quantity * 0.1).toFixed(1)} libras`
-                )
-            )
+            ))
         ),
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             Link,
@@ -3460,17 +3459,77 @@ const Resume_Component = ({ match }) => {
 
 /* harmony default export */ var Resume = (Resume_Component);
 // CONCATENATED MODULE: ./src/Components/User.jsx
+function User_asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+
 
 
 
 const User_Component = () => {
+    const [state, setstate] = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(null);
+
+    Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useEffect"])(() => {
+        User_asyncToGenerator(function* () {
+            const raw = yield fetch(`${PATH}clientdescription?id=1`);
+            setstate((yield raw.json()));
+        })();
+    }, []);
+
     const logout = () => {
-        localStorage.removeItem('user');
+        localStorage.removeItem(USER);
     };
 
-    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+    const username = localStorage.getItem(USER);
+    const { score, clientId } = state || {};
+
+    return state ? external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
         external_root_React_commonjs2_react_commonjs_react_amd_react_["Fragment"],
         null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'figure',
+            { className: 'user__fig' },
+            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('img', {
+                className: 'user__img',
+                src: `https://gravatar.com/avatar/${username}`,
+                alt: ''
+            })
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'h1',
+            { className: 'user__main' },
+            `${localStorage.getItem('user') || 'EcoUsuario'}`
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'h3',
+            null,
+            'Ciudad'
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'small',
+            { className: 'user__title' },
+            clientId.dni_city || 'El Mundo'
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'h3',
+            null,
+            'Activo desde'
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'small',
+            { className: 'user__title' },
+            'Hoy'
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'h3',
+            null,
+            'Peso reciclado'
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            'small',
+            { className: 'user__title' },
+            score || 0,
+            ' Libras'
+        ),
         external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
             Link,
             { to: '/scan' },
@@ -3489,6 +3548,10 @@ const User_Component = () => {
                 'Logout'
             )
         )
+    ) : external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        'div',
+        { className: 'user__loader' },
+        'Loading...'
     );
 };
 
