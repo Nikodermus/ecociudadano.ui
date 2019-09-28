@@ -3597,7 +3597,7 @@ const App = () => {
             'div',
             { className: 'app__content' },
             external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
-                react_router_dom_BrowserRouter,
+                react_router_dom_HashRouter,
                 null,
                 external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
                     react_router_Switch,
