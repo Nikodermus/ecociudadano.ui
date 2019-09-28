@@ -1,5 +1,6 @@
 import React, { useEffect, Fragment } from 'react';
 import Webcam from 'react-webcam';
+import { Link } from 'react-router-dom';
 
 import border from '../assets/cam_border.svg';
 
@@ -25,7 +26,9 @@ const Component = ({ history }) => {
                 <Webcam className="scan__cam" />
                 <img src={border} alt="" className="scan__border" />
             </div>
-            <button className="scan__btn">Inicio</button>
+            <Link to="/user">
+                <button className="scan__btn">Inicio</button>
+            </Link>
             <h2 className="scan__sub">Para poder ingresar al reciclaje</h2>
         </Fragment>
     );

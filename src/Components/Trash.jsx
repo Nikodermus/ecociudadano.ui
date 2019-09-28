@@ -1,13 +1,11 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-import wave from '../assets/wave.svg';
-
 const Component = () => {
     const [trash, setTrash] = useState(0);
 
     const addTrash = ({ keyCode }) => {
-        if (keyCode === 171) {
+        if (keyCode === 78) {
             const random = Math.random() * (2 - 0.1) + 0.1;
             setTrash((prev) => (Number(prev) + random).toFixed(1));
         }
@@ -23,6 +21,7 @@ const Component = () => {
 
     return (
         <Fragment>
+            <h2>Ingresa el reciclaje</h2>
             <Link to={`/resume/${Math.floor(trash)}`}>
                 <button type="button" className="trash__btn">
                     Terminar

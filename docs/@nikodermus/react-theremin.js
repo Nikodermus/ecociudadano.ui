@@ -118,7 +118,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
 if (false) { var throwOnDirectAccess, ReactIs; } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(14)();
+  module.exports = __webpack_require__(13)();
 }
 
 
@@ -139,7 +139,7 @@ module.exports = _inheritsLoose;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(17)
+var isarray = __webpack_require__(16)
 
 /**
  * Expose `pathToRegexp`.
@@ -581,7 +581,7 @@ module.exports = function() {
   return global[key] = (global[key] || 0) + 1;
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(16)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15)))
 
 /***/ }),
 /* 6 */
@@ -594,7 +594,7 @@ module.exports = function() {
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
  */
-var ReactIs = __webpack_require__(20);
+var ReactIs = __webpack_require__(19);
 var REACT_STATICS = {
     childContextTypes: true,
     contextType: true,
@@ -850,17 +850,11 @@ if (false) { var parent, cache, hot; } else {
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(22);
+module.exports = __webpack_require__(21);
 
 
 /***/ }),
 /* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "wave.0e9bf7d1.svg";
-
-/***/ }),
-/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -873,7 +867,7 @@ module.exports = __webpack_require__.p + "wave.0e9bf7d1.svg";
 
 
 
-var ReactPropTypesSecret = __webpack_require__(15);
+var ReactPropTypesSecret = __webpack_require__(14);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -931,7 +925,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -950,7 +944,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 var g;
@@ -976,7 +970,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -985,19 +979,19 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(18);
 } else {}
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1019,19 +1013,19 @@ exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(20);
 } else {}
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1053,7 +1047,7 @@ exports.isElement=function(a){return"object"===typeof a&&null!==a&&a.$$typeof===
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2335,7 +2329,7 @@ var path_to_regexp = __webpack_require__(4);
 var path_to_regexp_default = /*#__PURE__*/__webpack_require__.n(path_to_regexp);
 
 // EXTERNAL MODULE: ./node_modules/react-router/node_modules/react-is/index.js
-var react_is = __webpack_require__(18);
+var react_is = __webpack_require__(17);
 
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -3255,12 +3249,7 @@ if (false) { var ariaCurrentType; }
 
 //# sourceMappingURL=react-router-dom.js.map
 
-// EXTERNAL MODULE: ./src/assets/wave.svg
-var wave = __webpack_require__(13);
-
 // CONCATENATED MODULE: ./src/Components/Trash.jsx
-
-
 
 
 
@@ -3268,7 +3257,7 @@ const Trash_Component = () => {
     const [trash, setTrash] = Object(external_root_React_commonjs2_react_commonjs_react_amd_react_["useState"])(0);
 
     const addTrash = ({ keyCode }) => {
-        if (keyCode === 171) {
+        if (keyCode === 78) {
             const random = Math.random() * (2 - 0.1) + 0.1;
             setTrash(prev => (Number(prev) + random).toFixed(1));
         }

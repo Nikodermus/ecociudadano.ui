@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import logo from '../assets/logo.svg';
 
@@ -15,10 +15,17 @@ const Component = () => {
         setInput((prev) => ({ ...prev, [name]: value }));
     };
 
+    const setAuth = () => {
+        localStorage.setItem('user', inputs.email);
+    };
+
     const { password, password2, email } = inputs;
     const disabled = !email || !password || password !== password2;
+    const isAuth = localStorage.getItem('user');
 
-    return (
+    return isAuth ? (
+        <Redirect to="/user" />
+    ) : (
         <div>
             <img src={logo} alt="" />
             <input
@@ -43,7 +50,7 @@ const Component = () => {
                 placeholder="Password Confirm"
             />
             <Link to="/scan">
-                <button type="button" disabled={disabled}>
+                <button type="button" disabled={disabled} onClick={setAuth}>
                     Register
                 </button>
             </Link>

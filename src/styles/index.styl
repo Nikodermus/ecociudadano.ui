@@ -30,6 +30,9 @@ body
     justify-content: center
     align-items: center
 
+p
+    color: white
+
 button
     background: green
     border-radius: 20px
@@ -160,6 +163,7 @@ h3
         position: absolute
         width: 90%
         left: 5%
+        font-size: 2rem
 
     &__bar
         padding-top: 80px
@@ -174,3 +178,54 @@ h3
         width: 267px
         clip-path: circle(70.7% at 50% 100%)
         max-height: 1000px
+
+/*
+*
+ *
+  *
+    SCAN
+  *
+ *
+*
+*/
+.resume
+    &__list
+        display: flex
+        flex-wrap: wrap
+        padding-left: 20px
+        margin-bottom: 20px
+
+    &__item
+        flex-basis: 50%
+        margin-bottom: 20px
+
+        &::marker
+            color: green-light
+
+    &__title
+        font-size: 2rem
+        margin-bottom: 12px
+
+    &__sub
+        margin-bottom: 30px
+
+    &__qty
+        padding-left: 1rem
+        color: white
+
+    &__type
+        font-size: 1.1rem
+        font-weight: bold
+
+/*
+*
+ *
+  *
+    SCAN
+  *
+ *
+*
+*/
+.user
+    &__btn
+        margin-bottom: 20px
