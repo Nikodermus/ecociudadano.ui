@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { TRASH_TRANSACTION } from '../utils/constants';
 
 const Component = ({ match }) => {
     const { quantity = 1 } = match.params;
+    const data = JSON.parse(localStorage.getItem(TRASH_TRANSACTION));
 
     return (
         <Fragment>
@@ -11,30 +13,14 @@ const Component = ({ match }) => {
             }`}</h1>
             <h2 className="resume__sub">Total Reciclaje</h2>
             <ul className="resume__list">
-                <li className="resume__item">
-                    <p className="resume__type">Carton</p>
-                    <small className="resume__qty">{`${(
-                        quantity * 0.33
-                    ).toFixed(1)} libras`}</small>
-                </li>
-                <li className="resume__item">
-                    <p className="resume__type">Plastico</p>
-                    <small className="resume__qty">{`${(quantity * 0.5).toFixed(
-                        1
-                    )} libras`}</small>
-                </li>
-                <li className="resume__item">
-                    <p className="resume__type">Vidrio</p>
-                    <small className="resume__qty">{`${(
-                        quantity * 0.07
-                    ).toFixed(1)} libras`}</small>
-                </li>
-                <li className="resume__item">
-                    <p className="resume__type">Tetrapack</p>
-                    <small className="resume__qty">{`${(quantity * 0.1).toFixed(
-                        1
-                    )} libras`}</small>
-                </li>
+                {data.map(({ garbageType, point }) => (
+                    <li className="resume__item" key={garbageType}>
+                        <p className="resume__type">{garbageType}</p>
+                        <small className="resume__qty">{`${point.toFixed(
+                            1
+                        )} libras`}</small>
+                    </li>
+                ))}
             </ul>
 
             <Link to="/user">

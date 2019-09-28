@@ -31,6 +31,8 @@ body
     align-items: center
 
 p
+small
+    text-align: center
     color: white
 
 button
@@ -216,16 +218,44 @@ h3
     &__type
         font-size: 1.1rem
         font-weight: bold
+        text-align: left
+        text-transform: capitalize
 
 /*
 *
  *
   *
-    SCAN
+    USER
   *
  *
 *
 */
 .user
+    &__loader
+        color: white
+        font-size: 2rem
+        margin-top: 4rem
+
     &__btn
+        margin-bottom: 20px
+
+    &__fig
+        margin: auto
+        margin-bottom: 20px
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        overflow: hidden
+        border: 3px solid white
+
+    &__img
+        background: green
+        width: 100%
+        object-fit: cover
+
+    &__main
+        margin-bottom: 40px
+
+    &__title
+        display: block
         margin-bottom: 20px
