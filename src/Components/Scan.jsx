@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import Webcam from 'react-webcam';
+
+import border from '../assets/cam_border.svg';
 
 const Component = ({ history }) => {
     const nextStep = ({ keyCode }) => {
@@ -17,15 +19,15 @@ const Component = ({ history }) => {
     }, []);
 
     return (
-        <div>
-            <Webcam
-                style={{
-                    width: '80vmin',
-                    height: '80vmin',
-                    background: 'black',
-                }}
-            />
-        </div>
+        <Fragment>
+            <h1 className="scan__title">Escanea tu codigo</h1>
+            <div className="scan__bg">
+                <Webcam className="scan__cam" />
+                <img src={border} alt="" className="scan__border" />
+            </div>
+            <button className="scan__btn">Inicio</button>
+            <h2 className="scan__sub">Para poder ingresar al reciclaje</h2>
+        </Fragment>
     );
 };
 

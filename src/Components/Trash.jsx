@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+
+import wave from '../assets/wave.svg';
 
 const Component = () => {
     const [trash, setTrash] = useState(0);
@@ -20,12 +22,20 @@ const Component = () => {
     }, []);
 
     return (
-        <div>
-            <p>{`${trash} libras`}</p>
+        <Fragment>
             <Link to={`/resume/${Math.floor(trash)}`}>
-                <button type="button">Terminar</button>
+                <button type="button" className="trash__btn">
+                    Terminar
+                </button>
             </Link>
-        </div>
+
+            <div
+                className="trash__bar"
+                style={{ height: `${200 + trash * 20}px` }}
+            >
+                <h1 className="trash__qty">{`${trash} libras`}</h1>
+            </div>
+        </Fragment>
     );
 };
 

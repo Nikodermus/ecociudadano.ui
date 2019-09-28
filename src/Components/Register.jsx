@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import logo from '../assets/logo.svg';
+
 const Component = () => {
     const [inputs, setInput] = useState({
         password: '',
@@ -18,6 +20,7 @@ const Component = () => {
 
     return (
         <div>
+            <img src={logo} alt="" />
             <input
                 type="text"
                 placeholder="E-mail"
