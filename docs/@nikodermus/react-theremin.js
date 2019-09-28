@@ -3473,8 +3473,34 @@ const Resume_Component = ({ match }) => {
 // CONCATENATED MODULE: ./src/Components/User.jsx
 
 
+
 const User_Component = () => {
-    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('div', null);
+    const logout = () => {
+        localStorage.removeItem('user');
+    };
+
+    return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+        external_root_React_commonjs2_react_commonjs_react_amd_react_["Fragment"],
+        null,
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            Link,
+            { to: '/scan' },
+            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                'button',
+                { className: 'user__btn', type: 'button' },
+                'Escanea'
+            )
+        ),
+        external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+            Link,
+            { to: '/' },
+            external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
+                'button',
+                { className: 'user__btn', type: 'button', onClick: logout },
+                'Logout'
+            )
+        )
+    );
 };
 
 /* harmony default export */ var User = (User_Component);
