@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1010.8 937.8" style="enable-background:new 0 0 1010.8 937.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:#1BA86F;}
+	.st5{fill:#CCD240;}
+	.st6{font-family:'Anton-Regular';}
+	.st7{font-size:105.9532px;}
+	.st8{clip-path:url(#SVGID_2_);fill:#CCD240;}
+	.st9{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st10{fill:#1CCC88;}
+	.st11{fill:#0F6245;}
+</style>
+<g>
+	<path class="st4" d="M727.7,288.9c0-124.5-102.3-225.1-227.4-222.2c-117.2,2.7-213.1,97.5-217,214.6c-1.2,36.9,6.6,71.9,21.3,102.9
+		l185.8,344.7c7.1,13.1,25.8,13,32.8-0.1l183.1-344.6C720,355.3,727.7,323,727.7,288.9z"/>
+	<g>
+		<path class="st5" d="M430.5,118.2c0.8-10.6,2-25.8,3.4-43c-22.3,0.6-43.4,1.2-65.9,1.8c40.3-35.3,131.8-37,186.3-5.4
+			c-20.9,5.6-43.5,10-64.7,18C468.6,97.3,449.1,108.9,430.5,118.2z"/>
+		<path class="st5" d="M288.5,337.7c26.4,40.8,62.3,67.2,109.3,84.1c-17.3,8.2-31.4,14.8-44.8,21.1c10.4,19.4,20.3,37.9,29.9,55.8
+			C336.8,486.1,284,398.3,288.5,337.7z"/>
+		<path class="st5" d="M695,407.4c11-47.2,7.8-90.9-12.3-136.3c17.4,7.1,32.1,13.1,48.3,19.8c6.3-21.6,12.3-42.1,18.4-63.2
+			C770.7,275.6,742.2,371.7,695,407.4z"/>
+	</g>
+	<text transform="matrix(1 0 0 1 197.7005 854.1893)" class="st4 st6 st7">Eco Ciudadano</text>
+	<g>
+		<defs>
+			<circle id="SVGID_1_" cx="505.4" cy="280.3" r="150.1"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<circle class="st8" cx="505.4" cy="280.3" r="150.1"/>
+		<polygon class="st9" points="665.2,260.8 628.2,260.8 628.2,293.8 598.2,293.8 598.2,265.8 561.2,265.8 561.2,315.8 534.2,315.8
+			534.2,293.8 497.2,293.8 497.2,328.8 464.2,328.8 464.2,274.8 427.2,274.8 427.2,298.8 392.2,298.8 392.2,260.8 355.2,260.8
+			355.2,387.8 392.2,387.8 392.2,435.8 427.2,435.8 427.2,437.8 461.2,437.8 461.2,490.8 498.2,490.8 498.2,430.8 534.2,430.8
+			534.2,452.8 571.2,452.8 571.2,430.8 592.2,430.8 598.2,430.8 629.2,430.8 629.2,397.8 665.2,397.8 		"/>
+	</g>
+</g>
+</svg>
