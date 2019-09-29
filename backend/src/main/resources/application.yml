@@ -1,0 +1,27 @@
+server:
+  port: 8086
+ 
+spring: 
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driverClassName: org.postgresql.Driver
+    platform: postgres
+    tomcat:
+      initial-size: 1
+      max-wait: 20000
+      max-active: 2
+      max-idle: 1
+      min-idle: 1
+      default-auto-commit: true
+  
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect 
+    show-sql: true
+    properties:
+      hibernate:
+        temp: 
+          use_jdbc_metadata_defaults: false 
+    hibernate:
+      ddl-auto: validate

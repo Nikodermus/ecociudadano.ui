@@ -1,16 +1,16 @@
-# theremin
+# [Eco Ciudadano](https://github.com/miguelmjro/hackatrix-ecociudadano)
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+**Proyecto de gamificacion de reciclaje y acciones ecologicas**
 
-Describe theremin here.
+-   [Back-end Repo](https://github.com/miguelmjro/hackatrix-ecociudadano)
+-   [Front-end Repo](https://github.com/nikodermus/ecociudadano.ui)
+-   [Live Back-end](https://ecociudadano.herokuapp.com/)
+-   [Live Demo](https://nikodermus.github.io/ecociudadano.ui/)
+-   [Sprint Board](https://trello.com/b/GFEUV4Yt/hackatrix)
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+## How to run
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+```javascript
+yarn install
+yarn start
+```
